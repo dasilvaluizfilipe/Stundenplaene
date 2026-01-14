@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>PDFs</title>
+<style>
+body { margin:0; background:#000; color:#0af; font-family:sans-serif; }
+#list a { display:block; padding:10px; text-decoration:none; color:#0af; }
+#list a:hover { background:#111; }
+iframe { width:100%; height:80vh; border:0; }
+</style>
+</head>
+<body>
+<div id="list"></div>
+<iframe id="viewer"></iframe>
+
+<script>
+// ANPASSEN
+const USER = "dasilvaluizfilipe";
+const REPO = "Stundenplaene";
+const PATH = "pdfs"; // Ordner mit PDFs
+const BRANCH = "main";
+
+const api = `https://api.github.com/repos/${USER}/${REPO}/contents/${PATH}`;
+
+fetch(api)
+  .then(r => r.json())
+  .then(files => {
+    files
+      .filter(f => f.name.endsWith('.pdf'))
+      .forEach(f => {
+        const a = document.createElement('a');
+        a.textContent = f.name;
+        a.href = `https://raw.githubusercontent.com/${USER}/${REPO}/${BRANCH}/${PATH}/${f.name}`;
+        a.onclick = e => {
+          e.preventDefault();
+          document.getElementById('viewer').src = a.href;
+        };
+        document.getElementById('list').appendChild(a);
+      });
+  });
+</script>
+</body>
+</html>
