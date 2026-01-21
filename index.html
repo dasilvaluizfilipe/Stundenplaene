@@ -1,20 +1,617 @@
+    <html>
+      <head>
+        <style>
+          body {
+            background-color: #0d0d0d;
+            color: #4ade80;
+            font-family: 'Consolas', 'Courier New', monospace;
+            padding: 30px;
+          }
 
-    <html><head><style>
-        body { background-color: #0d0d0d; color: #4ade80; font-family: 'Consolas', 'Courier New', monospace; padding: 30px; }
-        .container { max-width: 1100px; margin: auto; border: 1px solid #1f2937; padding: 20px; background: #050505; box-shadow: 0 0 20px rgba(0,0,0,0.5); }
-        h1 { font-size: 1.2em; letter-spacing: 4px; color: #166534; border-bottom: 1px solid #1f2937; padding-bottom: 10px; margin-bottom: 30px; }
-        .week-block { margin-bottom: 50px; }
-        .week-title { color: #ca8a04; font-size: 0.9em; margin-bottom: 10px; opacity: 0.8; }
-        table { width: 100%; border-collapse: collapse; }
-        th, td { border: 1px solid #1f2937; padding: 12px; text-align: left; font-size: 0.85em; }
-        th { color: #9ca3af; background: #111827; font-weight: normal; text-transform: uppercase; }
-        .zeit-col { color: #854d0e; width: 110px; }
-        .modul-box { color: #4ade80; }
-        .cancelled { color: #ef4444; text-decoration: line-through; opacity: 0.7; }
-        .empty { color: #1a1a1a; }
-        .cursor { display: inline-block; width: 8px; height: 15px; background: #4ade80; margin-left: 5px; animation: blink 1s infinite; }
-        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
-    </style></head><body>
-    <div class="container">
-    <h1>Stundenplan<span class="cursor"></span></h1>
-    <div class="week-block"><div class="week-title">> ADDR: vom 19.01.2026 bis 23.01.2026</div><table><tr><th>Time</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th></tr><tr><td class="zeit-col">[0800-0930]</td><td><span class="cancelled">M21.1 Netzwerke1</span></td><td><span class="cancelled">M21.1 Netzwerke1</span></td><td><span class='empty'>..</span></td><td><span class="modul-box">M22 WAE</span></td><td><span class="modul-box">M20.1 BetrSys1</span></td></tr><tr><td class="zeit-col">[0945-1115]</td><td><span class='empty'>..</span></td><td><span class='empty'>..</span></td><td><span class="modul-box">M15.1 QS</span></td><td><span class='empty'>..</span></td><td><span class="modul-box">M15.1 QS</span></td></tr><tr><td class="zeit-col">[1130-1300]</td><td><span class="modul-box">M20.1 BetrSys1</span></td><td><span class="modul-box">M15.1 QS</span></td><td><span class="modul-box">M19.1 Datensch1</span></td><td><span class="cancelled">M21.1 Netzwerke1</span></td><td><span class="cancelled">M21.1 Netzwerke1</span></td></tr><tr><td class="zeit-col">[1400-1530]</td><td><span class='empty'>..</span></td><td><span class="modul-box">M22 WAE</span></td><td><span class='empty'>..</span></td><td><span class="modul-box">M19.1 Datensch1</span></td><td><span class='empty'>..</span></td></tr></table></div><div class="week-block"><div class="week-title">> ADDR: vom 26.01.2026 bis 30.01.2026</div><table><tr><th>Time</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th></tr><tr><td class="zeit-col">[0800-0930]</td><td><span class="modul-box">M21.1 Netzwerke1</span></td><td><span class="modul-box">M21.1 Netzwerke1</span></td><td><span class='empty'>..</span></td><td><span class="modul-box">M22 WAE</span></td><td><span class="modul-box">M20.1 BetrSys1</span></td></tr><tr><td class="zeit-col">[0945-1115]</td><td><span class='empty'>..</span></td><td><span class='empty'>..</span></td><td><span class="modul-box">M15.1 QS</span></td><td><span class='empty'>..</span></td><td><span class="modul-box">M15.1 QS</span></td></tr><tr><td class="zeit-col">[1130-1300]</td><td><span class="modul-box">M20.1 BetrSys1</span></td><td><span class="modul-box">M15.1 QS</span></td><td><span class="modul-box">M19.1 Datensch1</span></td><td><span class="modul-box">M21.1 Netzwerke1</span></td><td><span class="modul-box">M21.1 Netzwerke1</span></td></tr><tr><td class="zeit-col">[1400-1530]</td><td><span class='empty'>..</span></td><td><span class="modul-box">M22 WAE</span></td><td><span class='empty'>..</span></td><td><span class="modul-box">M19.1 Datensch1</span></td><td><span class='empty'>..</span></td></tr></table></div><div class="week-block"><div class="week-title">> ADDR: vom 02.02.2026 bis 06.02.2026</div><table><tr><th>Time</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th></tr><tr><td class="zeit-col">[0800-0930]</td><td><span class='empty'>..</span></td><td><span class="modul-box">M16.2 ProjektMan</span></td><td><span class='empty'>..</span></td><td><span class="modul-box">M16.2 ProjektMan</span></td><td><span class="modul-box">M17.1 Krypto1</span></td></tr><tr><td class="zeit-col">[0945-1115]</td><td><span class="modul-box">M17.1 Krypto1</span></td><td><span class="modul-box">M17.1 Krypto1</span></td><td><span class="modul-box">M17.1 Krypto1</span></td><td><span class='empty'>..</span></td><td><span class="modul-box">M22 WAE</span></td></tr><tr><td class="zeit-col">[1130-1300]</td><td><span class="modul-box">M21.1 Netzwerke1</span></td><td><span class="modul-box">M21.1 Netzwerke1</span></td><td><span class="modul-box">M16.2 ProjektMan</span></td><td><span class="modul-box">M22 WAE</span></td><td><span class='empty'>..</span></td></tr><tr><td class="zeit-col">[1400-1530]</td><td><span class='empty'>..</span></td><td><span class='empty'>..</span></td><td><span class='empty'>..</span></td><td><span class='empty'>..</span></td><td><span class='empty'>..</span></td></tr></table></div><div class="week-block"><div class="week-title">> ADDR: vom 09.02.2026 bis 13.02.2026</div><table><tr><th>Time</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th></tr><tr><td class="zeit-col">[0800-0930]</td><td><span class='empty'>..</span></td><td><span class="modul-box">M16.2 ProjektMan</span></td><td><span class='empty'>..</span></td><td><span class="cancelled">M16.2 ProjektMan</span></td><td><span class="cancelled">M17.1 Krypto1</span></td></tr><tr><td class="zeit-col">[0945-1115]</td><td><span class="modul-box">M17.1 Krypto1</span></td><td><span class="modul-box">M17.1 Krypto1</span></td><td><span class="modul-box">M17.1 Krypto1</span></td><td><span class="modul-box">M16.2 ProjektMan</span></td><td><span class="cancelled">M22 WAE</span></td></tr><tr><td class="zeit-col">[1130-1300]</td><td><span class="modul-box">M21.1 Netzwerke1</span></td><td><span class="modul-box">M21.1 Netzwerke1</span></td><td><span class="modul-box">M16.2 ProjektMan</span></td><td><span class="cancelled">M22 WAE</span></td><td><span class="modul-box">M22 WAE</span></td></tr><tr><td class="zeit-col">[1400-1530]</td><td><span class="modul-box">M21.1 Netzwerke1</span></td><td><span class="modul-box">M21.1 Netzwerke1</span></td><td><span class='empty'>..</span></td><td><span class="modul-box">M22 WAE</span></td><td><span class='empty'>..</span></td></tr></table></div><div class="week-block"><div class="week-title">> ADDR: vom 16.02.2026 bis 20.02.2026</div><table><tr><th>Time</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th></tr><tr><td class="zeit-col">[0800-0930]</td><td><span class='empty'>..</span></td><td><span class="modul-box">M16.2 ProjektMan</span></td><td><span class='empty'>..</span></td><td><span class="modul-box">M16.2 ProjektMan</span></td><td><span class="modul-box">M17.1 Krypto1</span></td></tr><tr><td class="zeit-col">[0945-1115]</td><td><span class="cancelled">M17.1 Krypto1</span></td><td><span class="modul-box">M17.1 Krypto1</span></td><td><span class="modul-box">M17.1 Krypto1</span></td><td><span class='empty'>..</span></td><td><span class="modul-box">M22 WAE</span></td></tr><tr><td class="zeit-col">[1130-1300]</td><td><span class="cancelled">M21.1 Netzwerke1</span></td><td><span class="cancelled">M21.1 Netzwerke1</span></td><td><span class="modul-box">M16.2 ProjektMan</span></td><td><span class="modul-box">M22 WAE</span></td><td><span class='empty'>..</span></td></tr><tr><td class="zeit-col">[1400-1530]</td><td><span class='empty'>..</span></td><td><span class='empty'>..</span></td><td><span class='empty'>..</span></td><td><span class='empty'>..</span></td><td><span class='empty'>..</span></td></tr></table></div><div class="week-block"><div class="week-title">> ADDR: vom 23.02.2026 bis 27.02.2026</div><table><tr><th>Time</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th></tr><tr><td class="zeit-col">[0800-0930]</td><td><span class='empty'>..</span></td><td><span class="modul-box">M16.2 ProjektMan</span></td><td><span class='empty'>..</span></td><td><span class="modul-box">M16.2 ProjektMan</span></td><td><span class="modul-box">M17.1 Krypto1</span></td></tr><tr><td class="zeit-col">[0945-1115]</td><td><span class="modul-box">M17.1 Krypto1</span></td><td><span class="modul-box">M17.1 Krypto1</span></td><td><span class="modul-box">M17.1 Krypto1</span></td><td><span class='empty'>..</span></td><td><span class="modul-box">M22 WAE</span></td></tr><tr><td class="zeit-col">[1130-1300]</td><td><span class="modul-box">M21.1 Netzwerke1</span></td><td><span class="cancelled">M21.1 Netzwerke1</span></td><td><span class="modul-box">M16.2 ProjektMan</span></td><td><span class="modul-box">M22 WAE</span></td><td><span class='empty'>..</span></td></tr><tr><td class="zeit-col">[1400-1530]</td><td><span class='empty'>..</span></td><td><span class='empty'>..</span></td><td><span class='empty'>..</span></td><td><span class='empty'>..</span></td><td><span class='empty'>..</span></td></tr></table></div></div></body></html>
+          .container {
+            max-width: 1100px;
+            margin: auto;
+            border: 1px solid #1f2937;
+            padding: 20px;
+            background: #050505;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+          }
+
+          h1 {
+            font-size: 1.2em;
+            letter-spacing: 4px;
+            color: #166534;
+            border-bottom: 1px solid #1f2937;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+          }
+
+          .week-block {
+            margin-bottom: 50px;
+          }
+
+          .week-title {
+            color: #ca8a04;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            opacity: 0.8;
+          }
+
+          table {
+            width: 100%;
+            border-collapse: collapse;
+          }
+
+          th,
+          td {
+            border: 1px solid #1f2937;
+            padding: 12px;
+            text-align: left;
+            font-size: 0.85em;
+          }
+
+          th {
+            color: #9ca3af;
+            background: #111827;
+            font-weight: normal;
+            text-transform: uppercase;
+          }
+
+          .zeit-col {
+            color: #854d0e;
+            width: 110px;
+          }
+
+          .modul-box {
+            color: #4ade80;
+          }
+
+          .cancelled {
+            color: #ef4444;
+            text-decoration: line-through;
+            opacity: 0.7;
+          }
+
+          .empty {
+            color: #1a1a1a;
+          }
+
+          .cursor {
+            display: inline-block;
+            width: 8px;
+            height: 15px;
+            background: #4ade80;
+            margin-left: 5px;
+            animation: blink 1s infinite;
+          }
+
+          @keyframes blink {
+
+            0%,
+            100% {
+              opacity: 1;
+            }
+
+            50% {
+              opacity: 0;
+            }
+          }
+        </style>
+      </head>
+      <body>
+        <div class="container">
+          <h1>Stundenplan <span class="cursor"></span>
+          </h1>
+          <div class="week-block">
+            <div class="week-title">> ADDR: vom 19.01.2026 bis 23.01.2026</div>
+            <table>
+              <tr>
+                <th>Time</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+              </tr>
+              <tr>
+                <td class="zeit-col">[0800-0930]</td>
+                <td>
+                  <span class="cancelled">M21.1 Netzwerke1</span>
+                </td>
+                <td>
+                  <span class="cancelled">M21.1 Netzwerke1</span>
+                </td>
+                <td>
+                  <span class='empty'>..</span>
+                </td>
+                <td>
+                  <span class="modul-box">M22 WAE</span>
+                </td>
+                <td>
+                  <span class="modul-box">M20.1 BetrSys1</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="zeit-col">[0945-1115]</td>
+                <td>
+                  <span class='empty'>..</span>
+                </td>
+                <td>
+                  <span class='empty'>..</span>
+                </td>
+                <td>
+                  <span class="modul-box">M15.1 QS</span>
+                </td>
+                <td>
+                  <span class='empty'>..</span>
+                </td>
+                <td>
+                  <span class="modul-box">M15.1 QS</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="zeit-col">[1130-1300]</td>
+                <td>
+                  <span class="modul-box">M20.1 BetrSys1</span>
+                </td>
+                <td>
+                  <span class="modul-box">M15.1 QS</span>
+                </td>
+                <td>
+                  <span class="modul-box">M19.1 Datensch1</span>
+                </td>
+                <td>
+                  <span class="cancelled">M21.1 Netzwerke1</span>
+                </td>
+                <td>
+                  <span class="cancelled">M21.1 Netzwerke1</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="zeit-col">[1400-1530]</td>
+                <td>
+                  <span class='empty'>..</span>
+                </td>
+                <td>
+                  <span class="modul-box">M22 WAE</span>
+                </td>
+                <td>
+                  <span class='empty'>..</span>
+                </td>
+                <td>
+                  <span class="modul-box">M19.1 Datensch1</span>
+                </td>
+                <td>
+                  <span class='empty'>..</span>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="week-block">
+            <div class="week-title">> ADDR: vom 26.01.2026 bis 30.01.2026</div>
+            <table>
+              <tr>
+                <th>Time</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+              </tr>
+              <tr>
+                <td class="zeit-col">[0800-0930]</td>
+                <td>
+                  <span class="modul-box">M21.1 Netzwerke1</span>
+                </td>
+                <td>
+                  <span class="modul-box">M21.1 Netzwerke1</span>
+                </td>
+                <td>
+                  <span class='empty'>..</span>
+                </td>
+                <td>
+                  <span class="modul-box">M22 WAE</span>
+                </td>
+                <td>
+                  <span class="modul-box">M20.1 BetrSys1</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="zeit-col">[0945-1115]</td>
+                <td>
+                  <span class='empty'>..</span>
+                </td>
+                <td>
+                  <span class='empty'>..</span>
+                </td>
+                <td>
+                  <span class="modul-box">M15.1 QS</span>
+                </td>
+                <td>
+                  <span class='empty'>..</span>
+                </td>
+                <td>
+                  <span class="modul-box">M15.1 QS</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="zeit-col">[1130-1300]</td>
+                <td>
+                  <span class="modul-box">M20.1 BetrSys1</span>
+                </td>
+                <td>
+                  <span class="modul-box">M15.1 QS</span>
+                </td>
+                <td>
+                  <span class="modul-box">M19.1 Datensch1</span>
+                </td>
+                <td>
+                  <span class="modul-box">M21.1 Netzwerke1</span>
+                </td>
+                <td>
+                  <span class="modul-box">M21.1 Netzwerke1</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="zeit-col">[1400-1530]</td>
+                <td>
+                  <span class='empty'>..</span>
+                </td>
+                <td>
+                  <span class="modul-box">M22 WAE</span>
+                </td>
+                <td>
+                  <span class='empty'>..</span>
+                </td>
+                <td>
+                  <span class="modul-box">M19.1 Datensch1</span>
+                </td>
+                <td>
+                  <span class='empty'>..</span>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="week-block">
+            <div class="week-title">> ADDR: vom 02.02.2026 bis 06.02.2026</div>
+            <table>
+              <tr>
+                <th>Time</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+              </tr>
+              <tr>
+                <td class="zeit-col">[0800-0930]</td>
+                <td>
+                  <span class='empty'>..</span>
+                </td>
+                <td>
+                  <span class="modul-box">M16.2 ProjektMan</span>
+                </td>
+                <td>
+                  <span class='empty'>..</span>
+                </td>
+                <td>
+                  <span class="modul-box">M16.2 ProjektMan</span>
+                </td>
+                <td>
+                  <span class="modul-box">M17.1 Krypto1</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="zeit-col">[0945-1115]</td>
+                <td>
+                  <span class="modul-box">M17.1 Krypto1</span>
+                </td>
+                <td>
+                  <span class="modul-box">M17.1 Krypto1</span>
+                </td>
+                <td>
+                  <span class="modul-box">M17.1 Krypto1</span>
+                </td>
+                <td>
+                  <span class='empty'>..</span>
+                </td>
+                <td>
+                  <span class="modul-box">M22 WAE</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="zeit-col">[1130-1300]</td>
+                <td>
+                  <span class="modul-box">M21.1 Netzwerke1</span>
+                </td>
+                <td>
+                  <span class="modul-box">M21.1 Netzwerke1</span>
+                </td>
+                <td>
+                  <span class="modul-box">M16.2 ProjektMan</span>
+                </td>
+                <td>
+                  <span class="modul-box">M22 WAE</span>
+                </td>
+                <td>
+                  <span class='empty'>..</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="zeit-col">[1400-1530]</td>
+                <td>
+                  <span class='empty'>..</span>
+                </td>
+                <td>
+                  <span class='empty'>..</span>
+                </td>
+                <td>
+                  <span class='empty'>..</span>
+                </td>
+                <td>
+                  <span class='empty'>..</span>
+                </td>
+                <td>
+                  <span class='empty'>..</span>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="week-block">
+            <div class="week-title">> ADDR: vom 09.02.2026 bis 13.02.2026</div>
+            <table>
+              <tr>
+                <th>Time</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+              </tr>
+              <tr>
+                <td class="zeit-col">[0800-0930]</td>
+                <td>
+                  <span class='empty'>..</span>
+                </td>
+                <td>
+                  <span class="modul-box">M16.2 ProjektMan</span>
+                </td>
+                <td>
+                  <span class='empty'>..</span>
+                </td>
+                <td>
+                  <span class="cancelled">M16.2 ProjektMan</span>
+                </td>
+                <td>
+                  <span class="cancelled">M17.1 Krypto1</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="zeit-col">[0945-1115]</td>
+                <td>
+                  <span class="modul-box">M17.1 Krypto1</span>
+                </td>
+                <td>
+                  <span class="modul-box">M17.1 Krypto1</span>
+                </td>
+                <td>
+                  <span class="modul-box">M17.1 Krypto1</span>
+                </td>
+                <td>
+                  <span class="modul-box">M16.2 ProjektMan</span>
+                </td>
+                <td>
+                  <span class="cancelled">M22 WAE</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="zeit-col">[1130-1300]</td>
+                <td>
+                  <span class="modul-box">M21.1 Netzwerke1</span>
+                </td>
+                <td>
+                  <span class="modul-box">M21.1 Netzwerke1</span>
+                </td>
+                <td>
+                  <span class="modul-box">M16.2 ProjektMan</span>
+                </td>
+                <td>
+                  <span class="cancelled">M22 WAE</span>
+                </td>
+                <td>
+                  <span class="modul-box">M22 WAE</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="zeit-col">[1400-1530]</td>
+                <td>
+                  <span class="modul-box">M21.1 Netzwerke1</span>
+                </td>
+                <td>
+                  <span class="modul-box">M21.1 Netzwerke1</span>
+                </td>
+                <td>
+                  <span class='empty'>..</span>
+                </td>
+                <td>
+                  <span class="modul-box">M22 WAE</span>
+                </td>
+                <td>
+                  <span class='empty'>..</span>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="week-block">
+            <div class="week-title">> ADDR: vom 16.02.2026 bis 20.02.2026</div>
+            <table>
+              <tr>
+                <th>Time</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+              </tr>
+              <tr>
+                <td class="zeit-col">[0800-0930]</td>
+                <td>
+                  <span class='empty'>..</span>
+                </td>
+                <td>
+                  <span class="modul-box">M16.2 ProjektMan</span>
+                </td>
+                <td>
+                  <span class='empty'>..</span>
+                </td>
+                <td>
+                  <span class="modul-box">M16.2 ProjektMan</span>
+                </td>
+                <td>
+                  <span class="modul-box">M17.1 Krypto1</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="zeit-col">[0945-1115]</td>
+                <td>
+                  <span class="cancelled">M17.1 Krypto1</span>
+                </td>
+                <td>
+                  <span class="modul-box">M17.1 Krypto1</span>
+                </td>
+                <td>
+                  <span class="modul-box">M17.1 Krypto1</span>
+                </td>
+                <td>
+                  <span class='empty'>..</span>
+                </td>
+                <td>
+                  <span class="modul-box">M22 WAE</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="zeit-col">[1130-1300]</td>
+                <td>
+                  <span class="cancelled">M21.1 Netzwerke1</span>
+                </td>
+                <td>
+                  <span class="cancelled">M21.1 Netzwerke1</span>
+                </td>
+                <td>
+                  <span class="modul-box">M16.2 ProjektMan</span>
+                </td>
+                <td>
+                  <span class="modul-box">M22 WAE</span>
+                </td>
+                <td>
+                  <span class='empty'>..</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="zeit-col">[1400-1530]</td>
+                <td>
+                  <span class='empty'>..</span>
+                </td>
+                <td>
+                  <span class='empty'>..</span>
+                </td>
+                <td>
+                  <span class='empty'>..</span>
+                </td>
+                <td>
+                  <span class='empty'>..</span>
+                </td>
+                <td>
+                  <span class='empty'>..</span>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="week-block">
+            <div class="week-title">> ADDR: vom 23.02.2026 bis 27.02.2026</div>
+            <table>
+              <tr>
+                <th>Time</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+              </tr>
+              <tr>
+                <td class="zeit-col">[0800-0930]</td>
+                <td>
+                  <span class='empty'>..</span>
+                </td>
+                <td>
+                  <span class="modul-box">M16.2 ProjektMan</span>
+                </td>
+                <td>
+                  <span class='empty'>..</span>
+                </td>
+                <td>
+                  <span class="modul-box">M16.2 ProjektMan</span>
+                </td>
+                <td>
+                  <span class="modul-box">M17.1 Krypto1</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="zeit-col">[0945-1115]</td>
+                <td>
+                  <span class="modul-box">M17.1 Krypto1</span>
+                </td>
+                <td>
+                  <span class="modul-box">M17.1 Krypto1</span>
+                </td>
+                <td>
+                  <span class="modul-box">M17.1 Krypto1</span>
+                </td>
+                <td>
+                  <span class='empty'>..</span>
+                </td>
+                <td>
+                  <span class="modul-box">M22 WAE</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="zeit-col">[1130-1300]</td>
+                <td>
+                  <span class="modul-box">M21.1 Netzwerke1</span>
+                </td>
+                <td>
+                  <span class="cancelled">M21.1 Netzwerke1</span>
+                </td>
+                <td>
+                  <span class="modul-box">M16.2 ProjektMan</span>
+                </td>
+                <td>
+                  <span class="modul-box">M22 WAE</span>
+                </td>
+                <td>
+                  <span class='empty'>..</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="zeit-col">[1400-1530]</td>
+                <td>
+                  <span class='empty'>..</span>
+                </td>
+                <td>
+                  <span class='empty'>..</span>
+                </td>
+                <td>
+                  <span class='empty'>..</span>
+                </td>
+                <td>
+                  <span class='empty'>..</span>
+                </td>
+                <td>
+                  <span class='empty'>..</span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </body>
+    </html>
